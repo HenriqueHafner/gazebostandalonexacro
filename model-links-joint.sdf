@@ -1,0 +1,20 @@
+<model name="modelname_value">
+  <link name="linkname_value">
+    <pose> linkpose_value </pose>
+    <inertial>
+    <mass>filled!</mass>
+    <inertia> 'inertiatensor_value' </inertia>
+    <pose> 'inertiapose_value' </pose>
+    </inertial>
+    <visual name="filled!">
+    <pose> visualpose_value </pose>
+    <geometry><mesh> 'meshpath_value' </mesh></geometry>
+    </visual>
+  </link>
+  <joint name="jointname_value" type="type">
+    <parent>parent</parent>
+    <child>child</child>
+    <pose> jointpose_value </pose>
+    <axis><xyz>axis</xyz></axis>
+  </joint>
+</model>

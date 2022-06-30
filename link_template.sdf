@@ -1,0 +1,13 @@
+
+  <link name='linkname_value'>
+    <pose> linkpose_value </pose>
+    <inertial>
+    <mass> mass_value </mass>
+    <inertia> 'inertiatensor_value' </inertia>
+    <pose> 'inertiapose_value' </pose>
+    </inertial>
+    <visual name='visualname_value'>
+    <pose> visualpose_value </pose>
+    <geometry><mesh> 'meshpath_value' </mesh></geometry>
+    </visual>
+  </link>
