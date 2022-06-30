@@ -1,4 +1,3 @@
-
   <joint name='jointname_value' type='type_value'>
     <parent> parent_value </parent>
     <child> child_value </child>
