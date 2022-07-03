@@ -1,6 +1,0 @@
-  <joint name='jointname_value' type='type_value'>
-    <parent> parent_value </parent>
-    <child> child_value </child>
-    <pose> jointpose_value </pose>
-    <axis><xyz> axis_value </xyz></axis>
-  </joint>
