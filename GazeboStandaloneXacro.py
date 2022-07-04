@@ -4,6 +4,7 @@
 import xml.etree.ElementTree as et
 import copy
 import json
+import os
 
 def val_chk(valin):
     valin = valin.replace(' ','')
@@ -67,11 +68,24 @@ def get_model_json_data(folder_path='' ):
     gazebo_model_data = json_data_get(file_path)
     return gazebo_model_data
 
+def create_directory(name:str,path=''): # Need to fix, It is not working.
+    if path == '':
+        path = os.path.abspath('')
+    listdir = os.listdir(path)
+    dir_path = os.path.join(path,name)
+    if listdir.count(name) == 0:
+        os.mkdir(dir_path)
+    print(dir_path)
+    return dir_path
+    
+
 def build_model_sdf_data(model_data):
-    model_xml_obj  = et.parse('model_template.xml')
-    link_template  = et.parse('link_template.xml' )
-    joint_template = et.parse('joint_template.xml')
+    model_name = model_data[2]
+    model_xml_obj  = et.parse(r'sdf_templates/model_template.xml')
+    link_template  = et.parse(r'sdf_templates/link_template.xml' )
+    joint_template = et.parse(r'sdf_templates/joint_template.xml')
     model_rootelem = model_xml_obj.getroot()
+    model_rootelem.attrib['name'] = model_name
     #build links
     links_data  = model_data[0]
     for link_values in links_data:
